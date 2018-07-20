@@ -9,9 +9,18 @@ Follow the steps to setup the project:
                 djangorestframework==3.7.7
                 psycopg2==2.7.3.2
 6. cd myproject
-7. python manage.py makemigrations
-8. python manage.py migrate
-9. python manage.py runserver
+7. cd myproject and open settings.py and make following changes to DATABASES SETTINGS(to change the database to postgresql):
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'djangodb', #Name of your postgresql database
+        'USER': 'todoapp',  #username generated
+        'PASSWORD':'mypassword',  #password generated
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }  
+8. python manage.py makemigrations
+9. python manage.py migrate
+10. python manage.py runserver
 
 
 Application will start at:
